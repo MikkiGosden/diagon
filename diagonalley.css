@@ -1,0 +1,703 @@
+/*================================================= *
+ * Jcink.com Forum Hosting Stylesheet
+ * ================================================
+ * Diagon Alley skin by mikkidoesdesign.tumblr.com
+ *================================================= */
+
+*{
+box-model:border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html { overflow-x: hidden; height:100%} 
+form { display:inline; }
+
+:root{
+	--text:'Source Sans Pro', sans-serif;
+	--display:'Amatic SC', cursive;
+	--black:#212121;
+	--white:#FFFDE7;
+	--aqua:#00838F;
+	--l-aqua:#4DB6AC;
+}
+
+body{
+	font-family:var(--text);
+	font-size:15px;
+	background:#424242;
+}
+
+.wall{
+	position:fixed;
+	left:0;
+	width:400px;
+	height:100%;
+	background-image:url('https://i.imgsafe.org/99/992a92f141.png');
+	background-repeat:repeat-y;
+	background-attachment:fixed;
+	z-index:1;
+}
+
+img{
+object-fit:cover;
+object-position:auto 0px;
+}
+
+strong, th{
+	font-weight:normal !important;
+}
+
+a:link, a:visited, a:hover, a:active{
+text-decoration:none;
+color:var(--aqua);
+}
+
+.dropdown-menu{
+background:transparent;
+padding:0;
+margin:0;
+z-index:1;
+box-shadow:none;
+border:none;
+left:-10px;
+}
+
+#sidebar{
+display:inline-block;
+width:300px;
+background:rgba(33,33,33,0.5);
+}
+
+#sidebar .welcome{
+margin:20px 9px 9px 9px;
+color:var(--white);
+background:var(--black);
+padding:10px;
+text-align:justify;
+}
+
+#sidebar .links{
+margin:20px auto 0 auto;
+width:250px;
+text-align:justify;
+}
+#sidebar .links:after{
+content:"";
+display:inline-block;
+width:100%;
+}
+#sidebar .links .btn{
+margin:2px 0;
+background:var(--black);
+color:var(--white);
+border:none;
+}
+#sidebar .cbox{
+background:var(--black);
+margin:0 9px 9px 9px;
+}
+
+
+#logo{
+font-family:var(--display);
+font-size:50px;
+padding:30px 20px 0px 30px;
+text-align:right;
+}
+#logo a{
+color:var(--white);
+letter-spacing:15px;
+}
+#logostrip, #submenu{
+display:none;
+}
+
+#navstrip{
+padding:10px 40px;
+text-align:right;
+color:var(--white);
+}
+#navstrip a{
+color:var(--white);
+}
+
+
+.subforums .tooltip{
+position:relative;
+display:inline-block;
+opacity:1;
+font-size:15px;
+}
+
+.topbar{
+position:fixed;
+top:0;
+background:var(--black);
+color:var(--black);
+padding:10px;
+display:flex;
+flex-direction:row;
+flex-wrap:nowrap;
+justify-content:space-between;
+width:100%;
+z-index:2;
+}
+.topbar a{
+color:#BDBDBD;
+}
+
+#userlinks{
+display:inline-block;
+width:764px;
+position:fixed;
+left:calc(100% - 784px);
+}
+#userlinks strong{
+display:none;
+}
+#userlinks [align="right"]{
+padding-left:10px;
+}
+#userlinks [align="right"] strong{
+display:inline;
+}
+#userlinkname{
+display:inline-block;
+width:300px;
+position:fixed;
+left:40px;
+}
+#recent-alerts{
+background:var(--black);
+color:var(--white);
+padding:5px;
+left:290px !important;
+}
+#recent-alerts .pformstrip{
+padding:10px;
+text-align:center;
+}
+#recent-alerts img{
+object-position:0 0;
+}
+
+#main{
+position:relative;
+top:50px;
+padding:40px;
+z-index:0;
+}
+
+#skin_selector{
+text-align:right;
+}
+
+.copyright{
+text-align:right;
+color:var(--white);
+margin-top:20px;
+}
+.copyright a{
+color:var(--l-aqua);
+}
+
+.maintitle{
+background:var(--black);
+color:var(--white);
+padding:40px 20px 20px 300px;
+letter-spacing:2px;
+font-size:18px;
+}
+.maintitle a{
+color:var(--white);
+}
+
+.forum-row{
+background:var(--white);
+padding:20px 20px 20px 0;
+}
+
+.forum-flex{
+display:flex;
+flex-direction:row;
+flex-wrap:nowrap;
+justify-content:space-between;
+}
+
+.f-col-one{
+width:80%;
+margin-left:300px;
+}
+
+.f-name{
+font-size:18px;
+letter-spacing:2px;
+}
+
+.f-desc{
+padding:10px 20px 10px 0;
+text-align:justify;
+}
+.subforums{
+margin-bottom:10px;
+}
+
+.f-last{
+text-align:center;
+}
+.f-last.well{
+padding:10px;
+margin-top:10px;
+}
+
+.f-top, .f-rep{
+font-size:18px;
+text-align:center;
+background:var(--black);
+color:var(--white);
+width:70px;
+height:70px;
+padding:5px;
+margin:2px;
+}
+
+.forum-subheader, .newstext, .topic-subheader{
+display:none;
+}
+
+.topic-row{
+background:var(--white);
+padding:20px 20px 20px 0;
+}
+
+.topic-flex{
+display:flex;
+flex-direction:row;
+flex-wrap:nowrap;
+justify-content:space-between;
+text-align:left;
+}
+
+.t-col-one{
+margin-left:300px;
+width:400px;
+}
+
+.t-desc{
+padding-left:18px;
+}
+
+.t-col-two{
+width:300px;
+padding:0 20px;
+}
+
+.t-col-three{
+min-width:125px;
+}
+
+.t-rep, .t-view{
+width:60px;
+height:60px;
+background:var(--black);
+color:var(--white);
+margin:2px 0;
+padding:5px;
+text-align:center;
+display:inline-block;
+}
+
+.t-recent{
+padding:10px;
+text-align:center;
+margin:10px 0;
+}
+
+#topic-list .row4{
+background:var(--white);
+padding:20px 20px 20px 300px;
+text-align:left;
+}
+#topic-list .row4 b{
+font-weight:normal;
+}
+
+.button-large{
+display:inline-block;
+background:var(--black);
+color:var(--white);
+padding:10px;
+margin:2px;
+}
+
+.wrapmini{
+display:none;
+}
+
+body.SF .darkrow2, body.SF .row2{
+text-align:right;
+}
+
+.postlinksbar{
+background:var(--white);
+padding:10px 20px 0 0;
+}
+
+.quotebuttons{
+display:inline-block;
+float:right;
+}
+
+.min-prof{
+display:inline-block;
+width:250px;
+}
+.min-name{
+text-align:center;
+font-size:18px;
+padding:20px 0;
+word-break:keep-all;
+}
+.min-av img{
+width:250px;
+height:400px;
+}
+.charinf{
+  margin:10px 0;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+}
+.charinf .label{
+  font-weight:normal;
+  padding:5px 10px;
+  background:var(--black);
+  width:120px;
+  margin:2.5px;
+}
+.charinf .player{
+  width:250px;
+}
+
+.miniprofile .playerdeets a{
+margin-right:10px;
+}
+
+.quotebuttons .button-small{
+margin-left:10px;
+}
+
+.postrow{
+background:var(--white);
+padding:20px 20px 20px 300px;
+}
+
+
+.post-flex{
+display:flex;
+flex-direction:row;
+flex-wrap:nowrap;
+justify-content:center;
+width:100%;
+padding-bottom:20px;
+border-bottom: solid 1px var(--black);
+}
+
+.post-content{
+width:100%;
+}
+
+.postcolor{
+padding:66px 50px 20px 50px;
+text-align:justify;
+}
+
+#QUOTE-WRAP tr:first-of-type{
+display:none;
+}
+#QUOTE{
+text-align:left;
+}
+
+#CODE-WRAP tr:first-of-type{
+display:none;
+}
+
+.pre-scrollable{
+max-width:500px;
+}
+
+#HTML-WRAP tr:first-of-type{
+display:none;
+}
+
+#HTML-WRAP tr:nth-child(2){
+background:#F5F5F5;
+border:solid 1px #CCCCCC;
+border-radius:5px 0 0 5px;
+display:inline-block;
+max-height: 350px;
+width:100%;
+overflow-y:scroll;
+padding:10px;
+font-family:Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
+
+
+body.ST .activeuserstrip, body.ST .row2{
+text-align:right;
+}
+
+body.ST .tableborder ~ table{
+width:calc(75% - 10px);
+position:relative;
+left:300px;
+}
+body.ST .pagination{
+padding-left:20px;
+}
+body.ST .bar{
+width:calc(75% - 5px);
+position:relative;
+left:300px;
+}
+body.ST [name="top"] + table{
+width:calc(75% - 10px);
+position:relative;
+left:300px;
+}
+
+.maintitle .right{
+float:right;
+}
+
+.board-stats{
+background:var(--white);
+padding:20px 20px 20px 300px;
+}
+
+.stat-flex{
+display:flex;
+flex-direction:row;
+flex-wrap:nowrap;
+}
+
+.s-col-three{
+width:25%;
+}
+
+.s-col-one, .s-col-two{
+width:37.5%;
+}
+
+.s-col-two{
+padding:0 20px;
+}
+
+.s-title{
+padding:10px;
+color:var(--white);
+background:var(--black);
+}
+
+.s-online{
+padding:10px 10px 0 0;
+height:170px;
+overflow-y:auto;
+}
+
+#recent-topics .maintitle{
+padding:10px;
+font-size:15px;
+letter-spacing:normal;
+}
+
+#recent-topics .recent-topics-date{
+display:none;
+}
+#recent-topics .maintitle + table{
+display:inline-block;
+height:170px;
+overflow-y:auto;
+padding:10px 10px 0 0;
+}
+
+.s-latest{
+padding:10px;
+color:var(--white);
+background:var(--black);
+}
+
+.s-latest .label-default{
+float:right;
+background:var(--white);
+padding:5px;
+word-break:keep-all;
+}
+
+.s-links{
+padding-top:10px;
+}
+
+.toplinks{
+visibility:hidden;
+}
+
+.toplinks a{
+visibility:visible;
+display:block;
+width:250px;
+text-align:left;
+padding:0 10px;
+margin:2px;
+}
+
+#posting-form{
+background:var(--white);
+}
+.pformstrip{
+padding:20px 20px 20px 300px;
+font-size:16px;
+letter-spacing:2px;
+}
+.pformleft{
+display:inline-block;
+width:450px;
+padding:20px 20px 20px 300px;
+}
+.pformright{
+display:inline-block;
+width:calc(100% - 40px - 450px);
+}
+.pformright textarea, #topic-title .forminput, #topic-desc .forminput{
+width:100%;
+padding:10px;
+}
+#post-options .pformright .checkbox{
+display:inline-block;
+}
+#post-options .pformright, #post-icon-options .pformright{
+padding-top:20px;
+}
+
+body.Post #navi + .tableborder .pformstrip{
+background:var(--black);
+color:var(--white);
+}
+body.Post #navi + .tableborder .row1{
+background:var(--white);
+padding:20px 20px 20px 300px !important;
+}
+
+.memberflex{
+padding:20px 20px 20px 300px;
+background:var(--white);
+color:var(--black);
+}
+.memberflex table.table thead th{
+font-weight:bold !important;
+}
+
+#moderating-team table th:nth-child(4), #moderating-team table td:nth-child(4), #moderating-team table th:nth-child(5), #moderating-team table td:nth-child(5){
+display:none;
+}
+
+#moderating-team table{
+padding:20px;
+background:var(--white);
+}
+
+#moderating-team th.pformstrip:first-of-type{
+padding-left:300px !important;
+}
+
+#moderating-team th.pformstrip{
+width:auto !important;
+padding:0px;
+}
+
+#moderating-team td.imgthumb{
+width:0 !important;
+padding:0 !important;
+}
+
+#moderating-team .imgthumb img{
+display:none;
+}
+
+#moderating-team .darkrow1{
+visibility:hidden;
+}
+
+body.Members .memberlistpg{
+text-align:right;
+color:var(--white);
+}
+body.Members .memberlistpg a{
+color:var(--l-aqua);
+}
+
+body.Search .search, body.Search .search legend{
+color:var(--white);
+}
+
+body.Search .forminput{
+color:var(--black);
+}
+
+body.Search table.tablebasic{
+background:var(--white);
+width:100%;
+}
+body.Search td.titlemedium:first-of-type{
+width:200px;
+}
+body.Search td:nth-child(4){
+width:auto !important;
+text-align:left;
+}
+body.Search td:nth-child(5){
+text-align:left;
+}
+
+body.Stats .pformstrip{
+padding:0;
+width:auto !important;
+}
+body.Stats .tableborder table{
+background:var(--white);
+}
+body.Stats .tableborder th:first-of-type, body.Stats .tableborder td:first-of-type{
+padding-left:300px;
+}
+body.Stats table + .pformstrip{
+background:var(--white);
+}
+
+.tablepad{
+background:var(--white);
+padding:20px 20px 20px 300px;
+}
+.tablepad .checkbox{
+display:inline-block;
+}
+
+.activeuserstrip{
+color:var(--white);
+margin:20px 0;
+}
+.activeuserstrip a{
+color:var(--l-aqua);
+}
+
+body.ST .row2{
+color:var(--white);
+}
+body.ST .row2 a{
+color:var(--l-aqua);
+}
+#delcookiesrow a{
+color:var(--l-aqua);
+}
